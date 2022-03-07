@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,57 @@
     <title>javaScript</title>
     <!-- Below are two ways of including javascript into the file -->
     <script>
-
-        // Selecting the content throught ID
-        document.getElementById('p1').
-        // by just writing document it is now reffereing to the body of html
-        
+        //JS Code
     </script>
     <script src="externaljs.js"></script>
 </head>
+
 <body>
     <h1 id="heading-1">Welcome All</h1>
     <!-- let's see how JS will enable us to work -->
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, placeat debitis iusto animi quibusdam labore cumque perferendis at repellat rem nulla laudantium blanditiis aut iste natus provident deserunt harum repudiandae ut culpa eaque repellendus maxime dignissimos maiores! Similique, reprehenderit nihil!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, placeat debitis iusto animi quibusdam labore
+        cumque perferendis at repellat rem nulla laudantium blanditiis aut iste natus provident deserunt harum
+        repudiandae ut culpa eaque repellendus maxime dignissimos maiores! Similique, reprehenderit nihil!
     </p>
-    <p id="p1">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis debitis minima nisi iusto cumque dolorem quidem molestias? Consequatur, ad iste!
+    <p id="p1" style="background-color: aqua;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis debitis minima nisi iusto cumque dolorem
+        quidem molestias? Consequatur, ad iste!
     </p>
+    <!-- we are going to use an event here, we can provide function inside "onclick" -->
+    <button onclick='changetext()'>Click me to change text</button>
+    <br>
+    <img id="image-1"
+        src="https://res.cloudinary.com/practicaldev/image/fetch/s--_HBZhuhF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/nweeqf97l2md3tlqkjyt.jpg"
+        height="200" width="300" alt="">
+    <script>
+        // Let's create a function
+        function changetext() {
+            // Selecting the content throught ID
+            // we are going to change the HTML inside
+
+            // document.getElementById('p1').innerHTML = '<b> We are learning javascript</b>';
+            // document.getElementById('p1').innerText = '<b>We are learning javascript</b>';
+            // document.getElementById('image-1').src = "https://cdn4.vectorstock.com/i/1000x1000/18/83/web-developer-design-vector-5881883.jpg";
+            // document.getElementById('image-1').height="400";
+            // document.getElementById('image-1').width="500";
+            document.getElementById('p1').style.backgroundColor = 'tomato';
+
+            document.getElementById('image-1').style.cssText = 'height:600px; width:700px;'
+            // Let's use this technique for our image
+
+            // <b> will not work for "text"
+            // by just writing document it is now reffereing to the body of html
+        }
+    </script>
 </body>
+
 </html>
 
 <!--
     Dom- Document Object Model -> It will think that this entire html is nothing but an object and inside that object the main property is "html"
+
+    Js is loosely types language. TypeScript - Achieved JS behaviour along with text
+    Js events
+    1) onclick-> basically used with button tags
  -->
