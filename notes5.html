@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // There are three scopes in JS 1) Global Scope 2) Block Scope 3) Function Scope
+        // We can only use block scope with "let variable"
+        // block scope will not work for "var"
+        // For the function both are same
+
+        // var x = "Javascript"
+        // console.log(x);
+        // {
+        //     var y = "Java"
+        //     console.log(y)
+        // }
+        // console.log(x, y)
+
+        // Block scope working for the "let"
+        // let x = "JS"
+        // console.log(x)
+        // {
+        //     let x="FE"
+        //     console.log(x)
+        // }
+        // console.log(x)
+
+        // Function scope working for both
+        var y="this is global y"
+        let x="this is global x"
+        console.log(x,y)
+        test()
+        function test(){
+            let x="This is local x"
+            var y="this is local y"
+            console.log(x,y)
+        }
+        console.log(x,y)
+
+        // We can't decalre "let" variables  again
+        // The const keyword has all the properties that are the same as the let keyword, except the user cannot update it.
+        //When users declare a const variable, they need to initialize it, otherwise, it returns an error. The user cannot update the const variable once it is declared. 
+    </script>
+</body>
+
+</html>
