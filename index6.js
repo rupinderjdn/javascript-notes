@@ -1,4 +1,6 @@
-var num1 = document.getElementById('num1')
+// var num1 = document.getElementById('num1')
+// We can Also Use "query selector in place of get element by id"
+var num1 = document.querySelector('#num1')
 var num2 = document.getElementById('num2')
 var operator = document.getElementById('operator')
 var result = document.getElementById('result')
