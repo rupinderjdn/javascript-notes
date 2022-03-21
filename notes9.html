@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
     <script>
         let a = "JAVASCRIPT IS Fun"
 
@@ -21,7 +22,27 @@
         // let c = new String("acciojob")
 
         // console.log(b == c) //false
+        console.log(a.includes('IS')) //true
 
+        var b = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptates."
+
+        console.log(b.lastIndexOf('sit'))
+        console.log(b.toUpperCase())
+        console.log(b.toLowerCase())
+
+        console.log(b.startsWith('Lorem')) //true
+        console.log(b.endsWith('voluptates')) //false
+
+        console.log(b.replace('l','JS'))  // Single instance
+        console.log(b.replaceAll('l','JS')) // All instances 
+
+        console.log(b.trim()) // removes whitespace in start and end
+
+        console.log(b.charAt(4))
+        console.log(b.charCodeAt(4))
+
+        console.log(b.slice(0,-4)) // 0 to last 5th character
+        console.log(b.match(/am/gi)) // g-> global i-> case insensitive
     </script>
 </body>
 
