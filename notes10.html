@@ -8,14 +8,36 @@
 </head>
 <body>
     <script>
-        let a = [2,1,2,3,4]
+        // let a = [2,1,2,3,4]
 
-        console.log(a)
-        a.push(10)
-        console.log(a)
+        // console.log(a)
+        // a.push(10)
+        // console.log(a)
 
-        a.pop()
-        console.log(a)
+        // a.pop()
+        // console.log(a)
+
+        // We can have heterogenous arrays too in javascript
+
+        let b=['javascript','html',23]
+        console.log(b)
+
+        // Appending in the array
+        b[b.length]='appended'
+        console.log(b)
+
+        // we can also append in any position so the left out numbers will be "empty"
+        b[6]='6th element'
+        console.log(b) // ['javascript', 'html', 23, 'appended', empty × 2, '6th element']
+
+
+        // shift() -> removes the element from the begining 
+        console.log(b.shift())
+
+        // unshift() -> addition in the front
+        console.log(b.unshift(56))
+
+        console.log(b)
     </script>
 </body>
 </html>
