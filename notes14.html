@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+
+<body>
+    <script>
+        function person(firstname, lastname, dob) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.dob = new Date(dob);
+        }
+        const person1 = new person('john', 'doe', '9-12-1999')
+        console.log(person1.dob.getFullYear())
+    </script>
+</body>
+
+</html>
