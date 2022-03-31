@@ -10,13 +10,39 @@
 
 <body>
     <script>
-        function person(firstname, lastname, dob) {
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.dob = new Date(dob);
+        // function person(firstname, lastname, dob) {
+        //     this.firstname = firstname;
+        //     this.lastname = lastname;
+        //     this.dob = new Date(dob);
+        // }
+        // person.prototype.getBirthYear = function () {
+        //     return this.dob.getFullYear();
+        // }
+        // person.prototype.getFullName = function(){
+        //     return `${this.firstname} ${this.lastname}`
+        // }
+
+        // const person1 = new person('john', 'doe', '9-12-1999')
+
+        // console.log(person1.getBirthYear())
+        // console.log(person1.getFullName());
+
+        // Class 
+        class person{
+            constructor(firstname, lastname, dob) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.dob = new Date(dob);
+            }
+            getBirthYear(){
+                return this.dob.getFullYear();
+            }
+            getFullName(){
+                return `${this.firstname} ${this.lastname}`
+            }
         }
-        const person1 = new person('john', 'doe', '9-12-1999')
-        console.log(person1.dob.getFullYear())
+        const p1=new person('Martha','Wayne','10-3-1968')
+        console.log(p1.getFullName());
     </script>
 </body>
 
