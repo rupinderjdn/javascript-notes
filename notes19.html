@@ -7,6 +7,53 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="script19.js"></script>
+    <script>
+        // let sukanya = {
+        //     name: 'sukanya',
+        //     batch: '11',
+        //     friends: ['pratik','pratyush','Karl Rock'],
+        //     xyz : function(){
+        //         console.log('xyz')
+        //     },
+        //     pqrs : ()=>{
+        //         console.log('pqrs')
+        //     },
+        //     hi:(name)=>{
+        //         console.log('hi',name)
+        //     }
+        // }
+        // sukanya.xyz()
+        // sukanya.hi('Rupinder')
+
+        let Rupinder = {
+            firstName : 'Rupinder',
+            lastName : 'Singh',
+            noOfProjects: 10,
+            packageSize : 11,
+            display : (firstName, lastName) => {
+                console.log(firstName,' ',lastName)
+            },
+            fullname : function(){
+                console.log(this.firstName,' ',this.lastName)
+            }
+        }
+        let Parag = {
+            firstName : 'Parag',
+            lastName : 'Rohilla',
+            noOfProjects: 10,
+            packageSize : 11,
+            display : (firstName, lastName) => {
+                console.log(firstName,' ',lastName)
+            }
+        }
+        // "this" always refer to the parents
+        // this - > Window
+        Rupinder.display('saurabh','Rajput')
+        Rupinder.fullname()
+
+        //Arrow Functions
+        // 1. this keyword doesn't work in arrow functions
+        // 2. Arrow function are not hoisted
+    </script>
 </body>
 </html>
