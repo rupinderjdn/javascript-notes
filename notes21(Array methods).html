@@ -8,21 +8,34 @@
 </head>
 <body>
     <script>
-        let arr=[4,2,4,5,6,7,2,1]
-        console.log(arr)
-        // arr.sort((a,b)=>a-b)
-        let newArr=[]
+        // let arr=[4,2,4,5,6,7,2,1]
+        // console.log(arr)
+        // // arr.sort((a,b)=>a-b)
+        // let newArr=[]
+        // // newArr = arr.filter((element,i)=>{
+        // //     if(i!=arr.length-1 && arr[i] === arr[i+1]){ 
+        // //         return 
+        // //     }
+        // //     return element
+        // // })
         // newArr = arr.filter((element,i)=>{
-        //     if(i!=arr.length-1 && arr[i] === arr[i+1]){ 
-        //         return 
-        //     }
-        //     return element
+        //     return arr.indexOf(element) === i
         // })
-        newArr = arr.filter((element,i)=>{
-            return arr.indexOf(element) === i
+        // // better way and don't even require sorting
+        // console.log(newArr)
+
+        // SOME
+        let arr=[4,6,2]
+        let ifEvenValExist = arr.some((e)=>{
+            return e%2===0
         })
-        // better way and don't even require sorting
-        console.log(newArr)
+        console.log(ifEvenValExist)
+
+        // Every
+        let allEven = arr.every((e)=>{
+            return e%2===0
+        })
+        console.log(allEven)
     </script>
 </body>
 </html>
