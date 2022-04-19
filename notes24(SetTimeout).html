@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function SayHello(first,second){
+            alert(`Hello ${first} ${second}`)
+        }
+        // setTimeout(SayHello,2000,"Rupinder","Singh")
+        // setTimeout("SayHello('Rupinder','Singh')",2000)
+        //in the above statement we cannot pass function without "" as in the SetTimeout we need to pass the refference of the function rather than the actual function call
+        // setTimeout(()=>SayHello("Rupinder","Singh"),2000)
+        // setInterval(SayHello,2000,"Rupinder","Singh"); -> runs again and again in an interval
+    </script>
+</body>
+</html>
