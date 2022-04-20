@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+    <script>
+        // Object.assign()
+        let random = {
+            abs : 'abc',
+            def : 'def'
+        }
+        // let random2 = Object.assign({},random)
+        // random2.abs = 'xyz'
+
+        // console.log(random,random2)
+
+        //Destructuring
+        let {abs,def} = random
+        // console.log(abs,def)
+
+        //Swap
+        var a=5
+        var b=9
+        var [b,a] = [a,b]
+        // we cannot do this with "let" as let does not allow to decalre the variable again
+        console.log(a,b)
+    </script>
+</body>
+</html>
