@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+
+<body>
+    <script>
+        // Higher Order Function -> takes another function as argument or returns an argument -> 
+        function makeCounter() {
+            var counter = 0;
+            return {
+            value: function () {
+                return counter;
+            },
+            increment: function () {
+                counter++;
+            }
+            };
+        }
+        var a = makeCounter();
+        var b = makeCounter();
+        a.increment();
+        console.log(a.value(), b.value());
+        // When makeCounter() is called, a snapshot of the context of that function is saved. All code inside makeCounter()
+        // will use that snapshot in their execution. Two calls of makeCounter() will thus create two different snapshots, with
+        // their own copy of counter
+
+        function abc(){
+            let y=10;
+            return function def(){
+                return y
+            }
+            // return def()
+        }
+        // Closures : Inner Function will have access to all the outside variables even after the function is returned
+        const innerFunc = abc()
+        console.log(innerFunc); // prints 10
+    </script>
+</body>
+
+</html>

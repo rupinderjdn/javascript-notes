@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Promises
+        // 1. pending 2. fulfilled 3. rejected 4.resolved
+        // pending -> resolved, rejected -> fulfilled
+
+        let x=5;
+        let y=6;
+        // let promise = new Promise(function(resolve,reject){
+        //     if(x===y){
+        //         resolve("resolved")
+        //     }
+        //     else {
+        //         reject("rejected")
+        //     }
+        // })
+        // promise.then(function(msg){
+        //     console.log(msg)
+        // },function(msg){
+        //     console.log(msg)
+        // })
+        // console.log(promise)
+
+        //asynchronous 
+        const fetchProfile = function() {
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    resolve("Finally resolved")
+                },5000)
+            })
+        }// kind of like an API
+        console.log(promise) //pending state
+        fetchProfile().then(function(msg){
+            console.log(msg)
+            console.log(promise)
+        }).catch(function(msg){
+            console.log(msg);
+        }) // looks more clear
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // CALLBACK HELL
+        const executeOrder = function(callback){
+            console.log('Order Recieved')
+            console.log('Chef started Preparing')
+            setTimeout(function(){
+                console.log('Pizza Sauce added')
+                setTimeout(function(){
+                    console.log('First Layer of cheeze added')
+                    setTimeout(function(){
+                        console.log('Toppings added')
+                        setTimeout(function(){
+                            console.log('Final layer of cheese')
+                            callback();
+                        },2000)
+                    },4000)
+                },3000)
+            },5000)
+        }
+
+        executeOrder(()=>console.log("Package Ready"))
+    </script>
+    <!-- 
+        1 Order recieved
+        2 Chef started preparing
+        [5 secs]
+        3 Pizza Sauce added
+        [3 secs]
+        4 First Layer of cheeze added
+        [4 secs]
+        5 Toppings added
+        [2 secs]
+        6 Final layer of cheese
+     -->
+</body>
+</html>
