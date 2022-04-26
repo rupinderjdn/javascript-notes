@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop</title>
+</head>
+<body>
+    <script>
+        // const items =[20,5,100,1,10,200,49]
+        // for(let item of items){
+        //     setTimeout(()=>{
+        //         console.log(item);
+        //     },item)
+        // }// in sorted order
+
+        console.log(1)
+        console.log(2)
+        console.log(3)
+        setTimeout(function(){
+        console.log(4)
+        }, 3000)
+
+        setTimeout(function(){
+        console.log(8)
+        }, 5000)
+        console.log(5)
+        console.log(6)
+
+        /* Event loop:
+        Keeps track of call stack, and if found empty, pushed tasks from the task queue into the call stack
+        synchronous code goes directly to the call stack and gets executed,
+        the asynchronous code goes in the TASK QUEUE and then the event loop checks if the call stack is empty and then cpde goes to call stack from task queue.
+        */
+    </script>
+</body>
+</html>

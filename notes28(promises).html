@@ -9,7 +9,7 @@
 <body>
     <script>
         // Promises
-        // 1. pending 2. fulfilled 3. rejected 4.resolved
+        // 1. pending  2. rejected 3.resolved(fulfilled)
         // pending -> resolved, rejected -> fulfilled
 
         let x=5;
@@ -37,12 +37,14 @@
                 },5000)
             })
         }// kind of like an API
-        console.log(promise) //pending state
+        // console.log(fetchProfile) //pending state
         fetchProfile().then(function(msg){
             console.log(msg)
-            console.log(promise)
+            // console.log(promis)
         }).catch(function(msg){
             console.log(msg);
+        }).finally(function(){
+            console.log("always executed")
         }) // looks more clear
     </script>
 </body>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // let studentData = [
+        // //     {
+        // //         name:"Rupinder",
+        // //         batch:"8"
+        // //     },
+        // //     {
+        // //         name:"Parag",
+        // //         batch: "9"
+        // //     }
+        // // ]
+        // // const fetchStudentData = ()=>{
+        // //     return new Promise((resolve,reject)=>{
+        // //         console.log("Fetching Student Data...")
+        // //         setTimeout(()=>{
+        // //             console.log("Data Fetched Successfully")
+        // //             resolve(studentData)
+        // //         },3000)
+        // //     })
+            
+        // // }
+        // // fetchStudentData().then((data)=>{
+        // //     console.log(data)
+        // // })
+
+        // //Promise Chaining
+        // // let promise = new Promise(function(resolve,reject){
+        // //     resolve(' a');
+        // // })
+        // // .then(function(msg){
+        // //     return msg+' b'
+        // // }).then(function(msg){
+        // //     console.log(msg)
+        // // })
+
+        // let promise1 = new Promise(function(resolve,reject){
+        //     setTimeout(function(){
+        //         resolve("Resolving promise 1")
+        //     },2000)
+            
+        // })
+        // let promise2 = new Promise(function(resolve,reject){
+        //     setTimeout(function(){
+        //         resolve ("Resolving promise 2")
+        //     },1000)
+        // })
+
+        // // promise1.then(function(msg){
+        // //     console.log(msg)
+        // // })
+
+        // // promise2.then(function(msg){
+        // //     console.log(msg)
+        // // })
+        // // promise2 will be resolved first and then promise 1, so how can we make promise1 resolve first
+
+        // promise1.then(function(msg){
+        //     console.log(msg)
+        //     return promise2
+        // }).then(function(msg){
+        //     console.log(msg)
+        // })
+
+
+        // ---------------------
+        const executeOrder = function () {
+      return new Promise(function (resolve, reject) {
+        console.log('Order placed')
+        setTimeout(function () {
+          console.log('Order Received!')
+          console.log('Chef started preparing!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addPizzaSauce = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(function () {
+          console.log('Pizza Sauce added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addFirstCheezeLayer = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(function () {
+          console.log('First layer of cheeze added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addToppings = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(function () {
+          console.log('Toppings added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addFinalCheezeLayer = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Final layer of cheeze added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const bakePizza = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Pizza baked!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addOreganoAndPack = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Oregano added and packed!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    executeOrder()
+    .then(addPizzaSauce)
+    .then(addFirstCheezeLayer)
+    .then(addToppings)
+    .then(addFinalCheezeLayer)
+    .then(bakePizza)
+    .then(addOreganoAndPack)
+    .then(function () {
+      console.log('The order is ready and handed over to the Zomato guy!')
+    })
+    </script>
+</body>
+</html>
