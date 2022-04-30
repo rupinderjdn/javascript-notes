@@ -21,12 +21,12 @@ function loadData() {
             para.innerHTML = `<h1>${this.responseText}</h1>`
         }
     }
-    // xhr.onreadystatechange = function(){
-    //     console.log('READYSTATE ',xhr.readyState);
-    //     if(this.status === 200 && this.readyState === 4){
-    //         console.log(this.responseText);
-    //     }
-    // }
+    xhr.onreadystatechange = function(){
+        console.log('READYSTATE ',xhr.readyState);
+        if(this.status === 200 && this.readyState === 4){
+            console.log(this.responseText);
+        }
+    }
     xhr.send();
 
     //Ready State values

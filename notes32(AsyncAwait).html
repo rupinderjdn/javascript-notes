@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+
+<body>
+    <script>
+        let promise =new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                // resolve("resolved after 3sec")
+                reject("rejection will return an error in case of a simple await")
+            },3000)
+        })
+        // async function abc() {
+        //     return await setTimeout(() => {
+        //         return Promise.resolve('hey man!')
+        //     }, 3000)
+        // }
+
+        //async -> tells JS that asynchronous code is being handled, also returns a promise
+        async function display() {
+            console.log("started")
+            try{
+                let msg= await promise; // 'await' waits for the promise to get resolved
+                console.log(msg)
+            }
+            catch(msg){
+                console.log(msg+" in the catch block ")
+            }
+            console.log("ended")
+        }
+        // function with 'async' keyword will always return a promise so to function with that we need
+        // abc().then(function(msg){
+        //     console.log(msg) // undefined
+        // })
+        //although async function returns a promise but they don't work like that
+        display()
+    </script>
+</body>
+
+</html>
